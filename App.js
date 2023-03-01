@@ -1,22 +1,13 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Header from './src/components/Header';
+import ListaEstado from './src/components/ListaEstados';
 export default function App() {
-  const tasks = ['Tarefa 1', 'Tarefa 2', 'Tarefa 3', 'Tarefa 4', 'Tarefa 5'];
-  const objetos = [{
-    "arroz": "100KCAL",
-    "banana": "50KCAL",
-    "maçã": "75KCAL",
-    "feijão": "150KCAL",
-  }];
   return (
     <View style={styles.container}>
-      <Header />
-      {/* <View>
-        <FlatList data={tasks} renderItem={({ item }) => <Text>{item}</Text>} />
-      </View> */}
-      <View>
-        <FlatList data={objetos} renderItem={({ item }) => <Text>{item}</Text>} />
-      </View>
+      <Header titulo="Lista de alunos" />
+      <Header titulo="Lista de professores" />
+      <Header titulo="Lista de desatentos" />
+      <ListaEstado />
     </View>
   );
 }
